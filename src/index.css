@@ -1,0 +1,120 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, b, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+  background-color:#e8dfdf
+
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.main {
+	height: 70vh;
+	background: linear-gradient(170deg, #594cee 0%, #8dd0f5 100% );
+	margin:3% 30%;
+	border-radius: 1rem;
+	box-sizing: border-box;
+}
+
+.label {
+	font-size: 30px;
+	font-family: 'Roboto', sans-serif;
+	color: #ffff;
+	font-weight: bold;
+	display:flex;
+	justify-content: center;
+	padding-top: 30px
+}
+
+.search {
+	display:flex;
+	justify-content: center;
+	padding:5%;
+	gap:10px
+}
+
+.input {
+	padding:1%;
+	border-radius: 5px;
+	border:none;
+	box-sizing: border-box;
+	background-color: white;
+	font: 'Roboto', sans-serif;
+
+}
+
+.input:focus{
+	box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.button{
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+	border-radius: 4px;
+	border:none;
+	cursor: pointer
+}
+
+.img_button {
+	width:18px;
+	
+}
+
+.container {
+	display: flex;
+	height: 45vh;
+	justify-content: center;
+    align-items: center;
+	gap: 24%
+}
+
+.city​_image_weather {
+	font-size: 25px;
+	font-family: 'Roboto', sans-serif;
+	color: #ffff;
+}
+.climate{
+	flex-direction: column;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	color: #ffff;
+	padding-bottom: 8%
+	
+}

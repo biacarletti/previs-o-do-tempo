@@ -1,0 +1,72 @@
+.header_site {
+    align-items: center;
+    background-color: #0080cd;
+    display: flex;
+    justify-content:space-around;
+    height: 120px;
+    position: relative;
+    width: 100%;
+    
+   
+}
+
+.logo_container {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+
+}
+
+.title {
+    font-family: Roboto-Regular;
+    font-size: 25px;
+    color: #ffff;
+    padding:20px;
+    width:8%;
+    display: flex;
+    padding-left: 18%;
+    font-weight: bold;
+    text-wrap: nowrap;
+}
+
+.img {
+  height:70px;
+  display: flex;
+  align-items: center;
+  padding:20px;
+  
+}
+
+.social_midia {
+display: flex;
+gap:20px;
+align-items: center;
+
+}
+
+.midia_facebook {
+    height:25px;
+}
+.midia_instagram {
+    height:25px
+}
+
+.midia_twitter {
+    height:25px
+}
+.midia_facebook:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+}
+
+.midia_instagram:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer
+}
+.midia_twitter:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer
+}
+
