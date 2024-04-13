@@ -1,16 +1,10 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { WeatherData } from "./models";
 import lupa from '../src/assets/lupa.png';
-
-
 
 export function App() {
     const [city, setCyte] = useState('')
     const [weatherForecast, setWeatherForecast] = useState<WeatherData>()
-
-    useEffect(() => {
-        console.log(import.meta.env.VITE_AMOR_DA_MINHA_VIDA)
-    }, [])
 
     function handleCityChange(value: string) {
         setCyte(value)
@@ -21,7 +15,7 @@ export function App() {
     }
 
     const handleSearch = () => {
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=79eddc120bd5dabf84a54e409a5e6c5c&lang=pt&units=metric`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${import.meta.env.VITE_WEATHER_API_KEY}&lang=pt&units=metric`)
             .then((response) => {
                 if (response.status == 200) {
                     return response.json()
