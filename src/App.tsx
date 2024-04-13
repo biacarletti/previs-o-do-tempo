@@ -9,7 +9,7 @@ export function App() {
     const [weatherForecast, setWeatherForecast] = useState<WeatherData>()
 
     useEffect(() => {
-        console.log(import.meta.env)
+        console.log(import.meta.env.VITE_AMOR_DA_MINHA_VIDA)
     }, [])
 
     function handleCityChange(value: string) {
