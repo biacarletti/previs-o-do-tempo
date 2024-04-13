@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { WeatherData } from "./models";
 import lupa from '../src/assets/lupa.png';
 
@@ -7,6 +7,10 @@ import lupa from '../src/assets/lupa.png';
 export function App() {
     const [city, setCyte] = useState('')
     const [weatherForecast, setWeatherForecast] = useState<WeatherData>()
+
+    useEffect(() => {
+        console.log(import.meta.env)
+    }, [])
 
     function handleCityChange(value: string) {
         setCyte(value)
