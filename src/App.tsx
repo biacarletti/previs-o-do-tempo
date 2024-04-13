@@ -29,52 +29,54 @@ export function App() {
 
 
     return (
-        <main className="main">
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="termo-de-consulta" className="label">Confira o Clima da Cidade </label>
-                <div className="search">
-                <input
-                    type="text"
-                    name="termo-de-consulta"
-                    id="termo-de-consulta"
-                    value={city}
-                    onChange={event => handleCityChange(event.target.value)}
-                    className="input"
-                />
-            <button onClick={handleSearch} type="submit" className="button"><img className="img_button" src={lupa} alt="lupa" /></button>
-                </div>
-            </form>
+        <main>
+            <div className="main">
+                <form onSubmit={handleSubmit} autoComplete="off">
+                    <label htmlFor="termo-de-consulta" className="label">Confira o Clima da Cidade </label>
+                    <div className="search">
+                        <input
+                            type="text"
+                            name="termo-de-consulta"
+                            id="termo-de-consulta"
+                            value={city}
+                            onChange={event => handleCityChange(event.target.value)}
+                            className="input"
+                        />
+                        <button onClick={handleSearch} type="submit" className="button"><img className="img_button" src={lupa} alt="lupa" /></button>
+                    </div>
+                </form>
 
-            {weatherForecast &&
-                <div className="container">
-                    <div className="city​_image_weather">
-                    <div>{weatherForecast?.name}</div>
-                    <ul>
-                        {
-                            weatherForecast.weather &&
-                            weatherForecast.weather.map((item) => {
-                                return (
-                                    <li key={item.id}>
-                                        <img src={`https://openweathermap.org/img/wn/${item.icon}@2x.png`} />
-                                    </li>
-                                )
-                            })
+                {weatherForecast &&
+                    <div className="container">
+                        <div className="city_image_weather">
+                            <div>{weatherForecast?.name}</div>
+                            <ul>
+                                {
+                                    weatherForecast.weather &&
+                                    weatherForecast.weather.map((item) => {
+                                        return (
+                                            <li key={item.id}>
+                                                <img src={`https://openweathermap.org/img/wn/${item.icon}@2x.png`} />
+                                            </li>
+                                        )
+                                    })
 
-                        }
-                    </ul>
-                    </div>
-                    <div className="climate">
-                    <div>
-                        <p>Temperatura: {weatherForecast?.main.temp} °C</p>
-                    </div>
-                    <p>Umidade: {weatherForecast?.main.humidity} % </p>
-                    {
-                        weatherForecast?.rain &&
-                        <p>Chuva: {weatherForecast?.rain?.["1h"]}</p>
-                    }
-                    <p>Vento: {weatherForecast?.wind.speed.toFixed(0)} Km/h</p>
-                    </div>
-                </div>}
+                                }
+                            </ul>
+                        </div>
+                        <div className="climate">
+                            <div>
+                                <p>Temperatura: {weatherForecast?.main.temp} °C</p>
+                            </div>
+                            <p>Umidade: {weatherForecast?.main.humidity} % </p>
+                            {
+                                weatherForecast?.rain &&
+                                <p>Chuva: {weatherForecast?.rain?.["1h"]}</p>
+                            }
+                            <p>Vento: {weatherForecast?.wind.speed.toFixed(0)} Km/h</p>
+                        </div>
+                    </div>}
+            </div>
         </main>
     )
 }

@@ -1,60 +1,49 @@
-.header_site {
+.header_site {    
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     background-color: #0080cd;
-    display: flex;
-    justify-content:space-around;
-    height: 120px;
-    position: relative;
-    width: 100%;
-    
-   
+    height: 7.5rem;
+    padding: 0 2rem;
 }
 
 .logo_container {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 40px;
-
-
+    gap: 2.5rem;
 }
 
 .title {
-    font-family: Roboto-Regular;
-    font-size: 25px;
-    color: #ffff;
-    padding:20px;
-    width:8%;
-    display: flex;
-    padding-left: 18%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
     font-weight: bold;
+    color: #ffff;
     text-wrap: nowrap;
 }
 
 .img {
-  height:70px;
+  height: 4.375rem;
   display: flex;
   align-items: center;
-  padding:20px;
-  
+  padding: 1.25rem;
 }
 
 .social_midia {
-display: flex;
-gap:20px;
-align-items: center;
-
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
 }
 
 .midia_facebook {
-    height:25px;
+    height: 1.5625rem;
 }
 .midia_instagram {
-    height:25px
+    height: 1.5625rem;
 }
 
 .midia_twitter {
-    height:25px
+    height: 1.5625rem;
 }
 .midia_facebook:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -70,3 +59,19 @@ align-items: center;
     cursor: pointer
 }
 
+@media screen and (max-width: 768px) {
+    .logo_container {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    .logo_container img {
+        width: 3rem;
+        height: 3rem;
+        padding: .4rem;
+    }
+}
